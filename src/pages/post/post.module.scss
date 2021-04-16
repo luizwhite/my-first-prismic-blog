@@ -1,0 +1,163 @@
+.banner {
+  height: 400px;
+  margin-bottom: 80px;
+  background-position: center;
+  background-size: cover;
+}
+
+.infoContainer {
+  time,
+  span {
+    color: var(--gray-300);
+    font-size: 0.875rem;
+  }
+
+  > div {
+    display: inline-flex;
+    align-items: center;
+
+    & + div {
+      margin-left: 1.625rem;
+    }
+
+    svg {
+      margin-right: 0.625rem;
+      color: var(--gray-300);
+    }
+  }
+}
+
+.editedDateTime {
+  display: block;
+  margin-top: 1rem;
+
+  font-style: italic;
+  font-size: 0.875rem;
+  color: var(--gray-300);
+
+  &::before {
+    content: '* ';
+  }
+}
+
+.contentContainer {
+  width: 700px;
+  font-size: 1.125rem;
+  text-align: justify;
+
+  p,
+  h1,
+  h2,
+  li,
+  pre {
+    line-height: 140%;
+  }
+
+  p + p,
+  pre + p,
+  p + pre {
+    margin-top: 1rem;
+  }
+
+  pre {
+    padding: calc(8px + 10px) calc(8px + 15px);
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-size: 1rem;
+  }
+
+  ul {
+    margin: 0.5rem 0 1rem;
+    list-style: disc inside;
+  }
+
+  h1 {
+    margin-bottom: 1.5625rem;
+    font-size: 3rem;
+    text-align: initial;
+    line-height: initial;
+  }
+
+  h2 {
+    margin-top: 4rem;
+    margin-bottom: 2.25rem;
+    font-size: 2.25rem;
+    text-align: initial;
+    line-height: initial;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    padding-bottom: 2px;
+    line-height: calc(160% + 2px);
+
+    border-bottom: 2px solid rgb(221, 224, 224, 0.3);
+
+    &:hover {
+      border-bottom: 2px solid var(--pink);
+    }
+  }
+
+  footer {
+    border-top: 1px solid rgba(215, 215, 215, 0.1);
+    margin-top: 3.75rem;
+    padding-top: 3rem;
+
+    a {
+      border: none !important;
+    }
+
+    > a:last-child {
+      display: block;
+      width: 100%;
+      padding: 0.5rem;
+      margin: 5rem 0;
+
+      background-color: var(--gray-000);
+      border-radius: 0.5rem;
+
+      text-align: center;
+      color: black;
+      font-size: 0.875rem;
+      font-weight: bold;
+
+      transition: filter 0.2s;
+
+      &:hover {
+        filter: brightness(0.7);
+      }
+    }
+  }
+}
+
+.postNavigationContainer {
+  display: flex;
+  justify-content: space-between;
+  text-align: initial;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    font-size: 18px;
+
+    &.nextDocument {
+      margin-left: auto;
+      text-align: right;
+    }
+
+    a {
+      margin-top: 0.5rem;
+      color: var(--pink);
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+      height: 70px;
+    }
+  }
+}
